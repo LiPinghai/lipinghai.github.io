@@ -4,18 +4,19 @@ url: "https://lipinghai.github.io"
 baseurl: "" 
 description: >
   尘世间一个迷途书童
-
 # Your information
 email: leepinghai@gmail.com
 author: 李平海
 authorEn: LiPinghai
 avatar: "//f2e.yy.com/s/activity/huya/avatar.jpg"
 profile: 尘世间一个迷途书童
+company: YY Inc.
+location: Guangzhou,China
 #twitter_username: twitter_username
 #github_username:  lipinghai
 profile_links:
   Email: "mailto:leepinghai@gmail.com"
-  GitHub: "https://lipinghai.github.com"
+  GitHub: "https://github.com/LiPinghai"
   # You can add more profile links above, or edit _includes/sidebar.html 
 
 # Comment Service (Disqus or 多说)

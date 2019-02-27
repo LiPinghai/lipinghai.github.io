@@ -6,8 +6,12 @@ tags: [translation]
 excerpt: 2012年之前，深度神经网络只是机器学习领域中的死水泥潭。但随即Krizhevsky和他的多伦多大学团队向一个备受瞩目的图像识别竞赛提交了作品，准确率突破性地超越了以往任何技术。一夜之间，深度神经网络成为了图像识别的领衔技术。
 ---
 
+
 > 原文 [How computers got shockingly good at recognizing images](https://arstechnica.com/science/2018/12/how-computers-got-shockingly-good-at-recognizing-images/)
+
 > 作者 [Timothy B. Lee](https://arstechnica.com/author/timlee/)
+
+> 译者: 李平海
 
 > 图片如无标示亦出自原文
 

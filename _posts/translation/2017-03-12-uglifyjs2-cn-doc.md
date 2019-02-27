@@ -5,6 +5,7 @@ categories: [tech]
 tags: [translation]
 excerpt: webpack本身集成了UglifyJS插件（webpack.optimize.UglifyJsPlugin），因此我们其实经常要用到它，但UglifyJS本身配置较复杂/选项繁多，又没有中文文档，使用起来如坠云雾。鉴于此特翻译此文。
 ---
+> 译者: 李平海
 
 ## 译序
 

@@ -6,6 +6,7 @@ tags: [translation]
 excerpt: npm script可谓前端日常用得最多的命令。本文译自npm官方script文档，详尽解释npm script用法。
 
 ---
+> 译者: 李平海
 
 本文翻译自[npm官方script文档](https://docs.npmjs.com/misc/scripts)
 

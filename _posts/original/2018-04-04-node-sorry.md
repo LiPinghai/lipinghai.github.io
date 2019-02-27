@@ -5,6 +5,7 @@ categories: [tech]
 tags: [original]
 excerpt: 最近很火的sorry在线制作gif的node版本，服务端采用 koa + fluent-ffmpeg, api用RESTful规范。
 ---
+> 作者: 李平海
 
 最近很火的sorry在线制作gif的node版本，创意来自[Xuty的ruby原版](https://github.com/xtyxtyx/sorry)，本文档亦有参考原文档。
 

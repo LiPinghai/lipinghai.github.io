@@ -5,6 +5,7 @@ categories: [tech]
 tags: [translation]
 excerpt: 此前翻译的UglifyJS2中文文档发布没多久UglifyJS3就发布了，囧，现在更新成UglifyJS3版本。
 ---
+> 译者: 李平海
 
 ## 译序
 此前翻译的[UglifyJS2中文文档](https://github.com/LiPinghai/UglifyJSDocCN/tree/UglifyJs2)发布没多久UglifyJS3就发布了，囧，现在把本文档也更新成UglifyJS3版本。

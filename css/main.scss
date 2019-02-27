@@ -41,3 +41,11 @@ $header-fg: #FFF;
         "syntax-highlighting",
         "easybook"
 ;
+
+
+.vcard-details {
+    list-style: none;
+    svg,span{
+        vertical-align: middle;
+    }
+}
