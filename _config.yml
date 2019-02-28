@@ -26,6 +26,8 @@ profile_links:
 
 excerpt_separator: <!--more-->
 
+google_analytics: UA-135381641-1
+
 header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     首页: /
