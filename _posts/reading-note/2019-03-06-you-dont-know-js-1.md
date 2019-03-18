@@ -5,8 +5,8 @@ categories: [tech]
 tags: [reading-note]
 excerpt: 《你不知道的JS》上卷读书笔记。Kyle Simpson的这部*you don't know JavaScript*实属不可多得的好书，深入浅出地解释了语言本身的诸多令人费解复杂概念的内部实现，读罢如醍醐灌顶豁然开朗，重建了对JS的整体视野，建议有一年以上经验的前端工程师都读读。
 ---
-
-Kyle Simpson的这部*you don't know JavaScript*实属不可多得的好书，深入浅出地解释了语言本身的诸多令人费解复杂概念的内部实现，读罢如醍醐灌顶豁然开朗，重建了对JS的整体视野，建议有一年以上经验的前端工程师都读读。
+# 《你不知道的JS》上卷读书笔记
+> Kyle Simpson的这部*you don't know JavaScript*实属不可多得的好书，深入浅出地解释了语言本身的诸多令人费解复杂概念的内部实现，读罢如醍醐灌顶豁然开朗，重建了对JS的整体视野，建议有一年以上经验的前端工程师都读读。
 
 ## 作用域
 

@@ -32,6 +32,7 @@ header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     首页: /
     归档: /category/
+    关于本站: /about/
 
 permalink: /archivers/:title
 plugins:

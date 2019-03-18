@@ -1,9 +1,10 @@
 ---
 layout: page
-title: About
+title: 关于本站
 permalink: /about/
 ---
 
-Welcome to this website!
+前端流浪者，李平海的个人博客，主营前端技术，兼营书评社评杂谈。
 
-> This website is using [laobubu](http://laobubu.net)'s theme: [EasyBook](https://github.com/laobubu/jekyll-theme-EasyBook)
+email: leepinghai@gmail.com
+
