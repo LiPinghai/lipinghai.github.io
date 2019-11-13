@@ -3,7 +3,7 @@ layout: page
 title: '为什么node—sass总是安装失败？'
 categories: [tech]
 tags: [original]
-excerpt: 
+excerpt: 'node-sass是我们开发中很常见的依赖包，也是安装时间冗长和最常见到报错的依赖。原因有很多种，我们在说报错原因之前，先来分析一下node-sass的安装过程。'
 ---
 > 作者: 李平海
 
