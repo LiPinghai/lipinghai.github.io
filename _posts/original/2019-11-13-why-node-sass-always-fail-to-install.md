@@ -138,5 +138,5 @@ Found bindings for the following environments:
 ## 原因五: 安装失败后重新安装
 安装失败后重新安装，有可能无权限删除已安装内容，此时`npm uninstall node-sass`或手动删掉原目录后再安装即可。
 
-## 原因六: 提示没有安装python、build失败等
-假如拉取`binding.node`失败，node-sass会尝试在本地编译`binding.node`，过程就需要python。假如你遇到前面几种情况解决了，实际上也不会出现在本地构建的情况了，我们就不谈这种失败中失败的情况吧 :-)
+## 原因六: 编译失败,提示没有安装python、build失败等
+假如拉取`binding.node`失败，node-sass会尝试在本地编译`binding.node`，过程就需要python。假如你遇到前面几种情况解决了，实际上也不会出现在本地编译的情况了，我们就不谈这种失败中失败的情况吧 :-)
