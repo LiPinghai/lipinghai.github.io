@@ -16,9 +16,25 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-site
+        path: _site
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
+    - name: Download site
+      uses: actions/download-artifact@v2
+      with:
+        name: dist-site
+        path: _site
+    - uses: matheusvanzan/sshpass-action@v2
+      with:
+        host: ${{ secrets.BLOG_HOST }}
+        user: ${{ secrets.BLOG_USER }}
+        pass: ${{ secrets.BLOG_PASSWORD }}
     - run: |
-        rsync -vzrtopg --progress  ./_site/*  ${{env.BLOG_USER}}@${{env.BLOG_HOST}}:${{env.BLOG_HOST}}
+        sshpass -p '${{secrets.BLOG_PASSWORD}}' rsync ./_site/ -r -e 'ssh -o StrictHostKeyChecking=no' ${{secrets.BLOG_USER}}@${{secrets.BLOG_HOST}}:${{secrets.BLOG_PATH}}
