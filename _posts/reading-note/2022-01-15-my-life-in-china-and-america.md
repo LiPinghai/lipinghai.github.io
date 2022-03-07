@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 《西学东渐记》笔记
 categories: [reading]
 tags: [reading-note]

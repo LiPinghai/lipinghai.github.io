@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 《文明的基因》笔记
 categories: [reading]
 tags: [reading-note]

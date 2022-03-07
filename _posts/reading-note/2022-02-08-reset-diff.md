@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 《开端》原著和电视剧的29点差异
 categories: [reading]
 tags: [reading-note]

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Meghani和《最后的酒杯》
 categories: [reading]
 tags: [reading-note]

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 《你不知道的JS》上卷读书笔记
 categories: [tech]
 tags: [reading-note]
