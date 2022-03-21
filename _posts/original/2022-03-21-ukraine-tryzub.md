@@ -1,7 +1,7 @@
 ---
 layout: page
 title: '乌克兰国徽——跨越千年的重生'
-categories: [tech]
+categories: [reading]
 tags: [original]
 excerpt: '反战的游行队伍里挥舞着乌克兰蓝黄国旗，城市地标亮起了蓝黄色射灯，很多人都知道乌克兰国旗是蓝天麦浪之意，那么乌克兰国徽三叉戟又代表什么呢？'
 ---
