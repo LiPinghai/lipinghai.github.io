@@ -8,6 +8,11 @@
         {% assign urlchk = url | split: "/" %}{% if urlchk[0] == '' and urlchk[1] != '' %}{% assign uprefix = site.baseurl %}{% else %}{% assign uprefix = ''%}{% endif %}
         <a class="page-link" href="{{ url | prepend: uprefix }}">{{ link[0] }}</a>
       {% endfor %}
+      {% assign posts=site.posts | where:"language", page.url | sort: 'date' %}
+      {% assign en_url = page.url | replace: '/zh/', '/en/' %}
+      {% assign zh_url = page.url | replace: '/en/', '/zh/' %}
+      <a href="{{ site.baseurl }}{{ en_url }}">English</a>
+      <a href="{{ site.baseurl }}{{ zh_url }}">中文</a>
     </nav>
   </div>
 </header>

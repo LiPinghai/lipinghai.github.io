@@ -35,12 +35,19 @@ header:
     归档: /category/
     关于本站: /about/
 
-permalink: /archivers/:title
+# permalink: /:title/
+permalink: /:path/
+
 plugins:
  - jekyll-paginate
  - jekyll-gist
  - jemoji
  - jekyll-sitemap
+ - jekyll-multiple-languages-plugin
+
+languages: 
+  en: "English"
+  zh: "中文" 
 
 # Build settings
 paginate: 5
