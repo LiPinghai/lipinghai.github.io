@@ -17,7 +17,7 @@ excerpt: 你已经吞了不少苦药。请再勇敢的喝了这杯毒酒吧！
 
 古吉拉特邦在印度最西边，临近巴基斯坦，是圣雄甘地的故乡。李敖改写的诗，有可能来自古吉拉特诗人Jhavercanda Meghani(贾维昌德·梅加尼，1897-1947)的*Chhello Katoro*（The last goblet,《最后的酒杯》）。Meghani是一位杰出的古吉拉特诗人，他曾搜罗了故乡的民间传说并出版。Meghani同时也是热心的自由斗士和记者，毕生致力于印度独立运动。甘地称他为“国民诗人”。他的著作超过百部，包括小说、短篇小说、文学评论散文和诗歌，当中尤其以爱国诗歌著称，为人传颂经久不衰。
 
-<img alt="1999年印度邮票上的梅加尼" src="../assets/Jhaverchand_Meghani_1999_stamp_of_India.jpeg" style="width: 300px" />
+<img alt="1999年印度邮票上的梅加尼" src="./assets/Jhaverchand_Meghani_1999_stamp_of_India.jpeg" style="width: 300px" />
 
 1930年，Meghani因写了*Sindhudo*一书而被判处2年徒刑，该书收录了激励印度青年参加反对英属印度独立斗争的歌曲。同年，甘地领导了盐行运动，为抗议殖民政府的食盐公卖制，甘地从德里到艾哈迈达巴德游行达400公里，数以千计的人们徒步到海边自己取盐，抗拒给政府交税。
 
