@@ -35,7 +35,7 @@ header:
     归档: /category/
     关于本站: /about/
 
-permalink: /archivers/:title
+permalink: /:title
 plugins:
  - jekyll-paginate
  - jekyll-gist
