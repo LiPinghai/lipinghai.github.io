@@ -1,7 +1,7 @@
 # Site settings
 title: 前端流浪者
 url: "https://lipinghai.cn"   
-baseurl: "" 
+baseurl: "/blog" 
 description: >
   尘世间一个迷途书童
 # Your information
