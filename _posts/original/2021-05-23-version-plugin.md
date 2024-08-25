@@ -20,7 +20,7 @@ excerpt: '实践中，我们经常要通过流水线、自动脚本等发布前�
 
 也可以用**version-plugin**，一键搞定，效果如下：
 
-![image.png](/assets/version-plugin.png)
+![image.png](../assets/version-plugin.png)
 
 
 以下为插件文档：

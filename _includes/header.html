@@ -8,6 +8,12 @@
         {% assign urlchk = url | split: "/" %}{% if urlchk[0] == '' and urlchk[1] != '' %}{% assign uprefix = site.baseurl %}{% else %}{% assign uprefix = ''%}{% endif %}
         <a class="page-link" href="{{ url | prepend: uprefix }}">{{ link[0] }}</a>
       {% endfor %}
+      {% assign current_path = page.url | remove: site.baseurl %}
+      {% if site.baseurl == "/blog_en" %}
+        <a href="{{ site.url }}/blog{{ current_path }}">中文</a>
+      {% elsif site.baseurl == "/blog" %}
+        <a href="{{ site.url }}/blog_en{{ current_path }}">English</a>
+      {% endif %}
     </nav>
   </div>
 </header>
