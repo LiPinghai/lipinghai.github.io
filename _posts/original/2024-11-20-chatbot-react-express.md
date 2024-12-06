@@ -54,10 +54,48 @@ npm install express cors openai dotenv
 在文件中添加以下代码以构建服务器：
 
 ```javascript
-...（此处省略，保留代码不翻译）
+const express = require("express");
+const cors = require("cors");
+const { Configuration, OpenAIApi } = require("openai");
+require("dotenv").config();
+
+const app = express();
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Configure OpenAI API
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+
+// Define the chat endpoint
+app.post("/chatbot/chat", async (req, res) => {
+  const { message } = req.body;
+
+  try {
+    const response = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message }],
+    });
+
+    res.json({ reply: response.data.choices[0].message.content });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Something went wrong with the API." });
+  }
+});
+
+// Start the server
+const PORT = process.env.PORT || 3005;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
 ```
 
-现在我们可以运行服务器：
+现在我们可以运行服务：
 
 ```bash
 node server.js
@@ -74,10 +112,12 @@ node server.js
 接下来，可以使用Postman或curl工具测试`/chat`端点：
 
 ```bash
-...（此处省略，保留代码不翻译）
+curl -X POST http://localhost:3005/chatbot/chat \
+-H "Content-Type: application/json" \
+-d '{"message": "Hello, ChatGPT!"}'
 ```
 
-如果一切正常，您将收到来自ChatGPT的响应。
+如果一切正常，将收到来自ChatGPT的响应。
 
 ## 创建React Web应用
 
@@ -114,25 +154,180 @@ npm run dev
 此文件是应用的入口点，应如下所示：
 
 ```javascript
-...（此处省略，保留代码不翻译）
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+      <App />
+  </StrictMode>,
 ```
 
 #### 在src/App.jsx中构建聊天界面
 将App.jsx的内容替换为以下简单的聊天机器人UI：
 
 ```javascript
-...（此处省略，保留代码不翻译）
+import * as React from 'react';
+import { useState } from "react";
+import './App.css'
+import axios from "axios";
+
+const Default = () => {
+
+    const [inputText, setInputText] = useState("");
+
+    const list = []
+    const [chatList, setChatList] = useState(list);
+
+    const addChatItem = (newItem) => {
+      setChatList(prevItems => [...prevItems, newItem]);
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    };
+
+    const sendMessage = async() => {
+
+        const input = document.querySelector('.chat-text');
+        const question = input.value;
+        addChatItem({from:'self', content: question});
+        setInputText('');
+        
+        const response = await axios.post("/chatbot/chat", {
+          question,
+        });
+        addChatItem({from:'other', content: response.data});
+ 
+    };
+
+    return (
+      <div className='control-pane'>
+        <div className="control-section">
+          <h1 hidden={chatList.length}>What can I help with?</h1>
+          <ul className='chat-list' hidden={!chatList.length}>
+            {chatList.map((chat, index) => (
+              <li className='chat-item' key={index}>
+                <div className={'chat-content ' + (chat.from === 'self' ? 'chat-content-self': 'chat-content-other')  }>
+                  {chat.content}
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className={'chat-input '+ (chatList.length ? 'chat-input-chated' : '' )}>
+            <input maxLength="500" rows="5" value={inputText} className='chat-text' type="text" onChange={(e)=>setInputText(e.target.value)} onKeyDown={handleKeyDown} placeholder="Ask me anything"/>
+            <button className={'submit-button ' + (inputText ? 'inputed' : '')}  onClick={sendMessage}>↑</button>
+          </div>
+        </div>
+      </div>);
+};
+
+export default Default;
 ```
 
 ### 第三步：在src/App.css中添加样式
 为聊天机器人UI创建基本样式：
 
 ```css
-...（此处省略，保留代码不翻译）
+#root {
+  max-width: 1280px;
+  min-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.chat-input {
+  color: rgb(13, 13, 13);
+  background-color: rgb(244, 244, 244);
+  line-height: 40px;
+  padding: 6px 10px;
+  border-radius: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat-input-chated {
+  position: absolute;
+  bottom: 10px;
+}
+
+.chat-text{
+  background-color: rgb(244, 244, 244);
+  border: none;
+  font-size: 16px;
+  width: 85%;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(227, 227, 227);
+  color: rgb(244, 244, 244);
+  font-size: 28px;
+  border-radius: 100%;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-family: system-ui;
+  font-weight: 600;
+  cursor: pointer;
+  float: right;
+  top: 4px;
+  position: relative;
+
+}
+
+.inputed {
+  background-color: rgb(0, 0, 0);
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.chat-list {
+  padding-left: 0;
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.chat-content {
+  width: fit-content;
+  max-width: 400px;
+  display: flex;
+  margin-bottom: 8px;
+  padding: 10px 20px;
+  line-height: 22px;
+  border-radius: 25px;
+  word-break: break-word;
+  text-align: left;
+}
+
+.chat-content-self {
+  color: rgb(13, 13, 13);
+  background-color: rgb(244, 244, 244);
+  justify-self: end;
+}
+
+input:focus{
+  outline: none;
+}
 ```
 
 ### 第四步：运行和测试
-启动Vite开发服务器：
+启动Vite开发服务：
 
 ```bash
 npm run dev
@@ -157,7 +352,7 @@ npm run build
 cd ..
 ```
 
-启动Express服务器：
+启动Express服务：
 
 ```bash
 node server.js
