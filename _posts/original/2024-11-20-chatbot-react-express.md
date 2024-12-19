@@ -6,13 +6,15 @@ tags: [original]
 excerpt: '用React、Express和OpenAI API构建聊天机器人。'
 ---
 
+[DEMO](https://www.lipinghai.com/chatbot/)https://www.lipinghai.com/chatbot/
+
 聊天机器人在构建互动型网络应用中越来越受欢迎，结合React、Express和OpenAI API的力量，使开发变得简单。在本教程中，您将学习如何构建一个功能齐全的聊天机器人网站，包括：
 
 * 使用React前端构建一个类似ChatGPT的用户友好界面。
 * 使用Express后端处理API调用并作为静态文件服务React应用。
 * 集成OpenAI API，实现自然语言处理。
 
-在本教程结束时，您将拥有一个集成无缝互动和先进AI能力的聊天机器人网站，可以直接部署。让我们开始吧！
+在本教程结束时，您将拥有一个集成无缝互动和先进AI能力的聊天机器人网站，可以直接部署。
 
 ## 构建服务器
 
