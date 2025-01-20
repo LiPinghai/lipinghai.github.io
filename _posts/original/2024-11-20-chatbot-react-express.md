@@ -1,12 +1,12 @@
 ---
 layout: page
-title: '构建全栈聊天机器人：React前端、Express后端以及OpenAI API集成'
+title: '构建全栈聊天机器人：React、Express以及OpenAI API'
 categories: [tech]
 tags: [original]
-excerpt: '用React、Express和OpenAI API构建聊天机器人。'
+excerpt: '用React(前端)、Express(后端)和OpenAI API构建GPT聊天机器人。'
 ---
-
 [REPO](https://github.com/LiPinghai/react-chatbot) https://github.com/LiPinghai/react-chatbot
+
 [DEMO](https://www.lipinghai.com/chatbot/)  https://www.lipinghai.com/chatbot/
 
 聊天机器人在构建互动型网络应用中越来越受欢迎，结合React、Express和OpenAI API的力量，使开发变得简单。在本教程中，您将学习如何构建一个功能齐全的聊天机器人网站，包括：
